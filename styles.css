@@ -82,6 +82,15 @@ section {
     background: radial-gradient(circle at 20% 10%, #120c26 0%, var(--bg) 55%);
 }
 
+#bg-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    opacity: 0.75;
+}
+
 .blob {
     position: absolute;
     border-radius: 50%;
@@ -330,9 +339,13 @@ nav {
 
 .hero-desc {
     font-size: 1.08rem;
-    color: var(--muted);
+    color: #c4c4d8;
     max-width: 580px;
     margin-bottom: 34px;
+    /* Keep text legible where the bright particle stream passes behind it */
+    text-shadow: 0 1px 14px rgba(7, 7, 13, 0.85);
+    position: relative;
+    z-index: 1;
 }
 .hero-desc strong { color: var(--text); font-weight: 600; }
 
@@ -902,7 +915,7 @@ footer {
    =========================== */
 /* Hidden initial state only applies when JS is active (progressive enhancement) */
 .js .reveal {
-    opacity: 0;
+    opacity: 1; /* TEMP-PREVIEW */
     transform: translateY(28px);
     transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
     will-change: opacity, transform;
