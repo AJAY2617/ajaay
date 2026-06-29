@@ -146,22 +146,57 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* ---------- Contact form ---------- */
+    // Messages are delivered to the inbox tied to this Web3Forms access key.
+    // 1) Go to https://web3forms.com  2) enter aajay7294@gmail.com  3) paste the key below.
+    const WEB3FORMS_KEY = 'YOUR_ACCESS_KEY_HERE';
+    const OWNER_EMAIL = 'aajay7294@gmail.com';
+
     const form = document.getElementById('contactForm');
     const status = document.getElementById('formStatus');
+
     if (form) {
-        form.addEventListener('submit', (e) => {
+        form.addEventListener('submit', async (e) => {
             e.preventDefault();
             const name = document.getElementById('name').value.trim();
             const email = document.getElementById('email').value.trim();
-            const subject = encodeURIComponent(document.getElementById('subject').value.trim());
-            const message = encodeURIComponent(
-                `Name: ${name}\nEmail: ${email}\n\n${document.getElementById('message').value.trim()}`
-            );
+            const subject = document.getElementById('subject').value.trim();
+            const message = document.getElementById('message').value.trim();
 
-            // Opens the visitor's mail client pre-filled to Ajay's inbox.
-            window.location.href = `mailto:aajay7294@gmail.com?subject=${subject}&body=${message}`;
-            status.textContent = 'Opening your email app… thank you for reaching out!';
-            form.reset();
+            // Fallback: until the Web3Forms key is set, open the visitor's mail app to OWNER_EMAIL.
+            if (!WEB3FORMS_KEY || WEB3FORMS_KEY === 'YOUR_ACCESS_KEY_HERE') {
+                const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+                window.location.href = `mailto:${OWNER_EMAIL}?subject=${encodeURIComponent(subject)}&body=${body}`;
+                status.style.color = '';
+                status.textContent = 'Opening your email app… thank you for reaching out!';
+                return;
+            }
+
+            status.style.color = '';
+            status.textContent = 'Sending…';
+
+            try {
+                const res = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify({
+                        access_key: WEB3FORMS_KEY,
+                        subject: subject || `New message from ${name}`,
+                        from_name: 'Portfolio Contact Form',
+                        name, email, message
+                    })
+                });
+                const data = await res.json();
+                if (data.success) {
+                    status.textContent = 'Thanks! Your message has been sent ✔';
+                    form.reset();
+                } else {
+                    status.style.color = '#ff7e7e';
+                    status.textContent = `Couldn't send — please email ${OWNER_EMAIL} directly.`;
+                }
+            } catch (err) {
+                status.style.color = '#ff7e7e';
+                status.textContent = `Network error — please email ${OWNER_EMAIL} directly.`;
+            }
         });
     }
 });
