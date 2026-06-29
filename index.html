@@ -3,263 +3,457 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Portfolio</title>
+    <title>Ajay A — AWS Cloud Engineer & Full-Stack Developer</title>
+    <meta name="description" content="Portfolio of Ajay A — Full-Stack Developer & AWS Cloud Engineer building AI-powered applications and scalable cloud platforms.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
+    <!-- Enables JS-only reveal animations; content stays visible if JS is disabled -->
+    <script>document.documentElement.classList.add('js');</script>
+
+    <!-- Scroll progress bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Custom cursor glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Animated background -->
+    <div class="bg-gradient">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="grid-overlay"></div>
+    </div>
+
+    <!-- Header -->
+    <header id="header">
         <div class="container">
             <nav>
-                <div class="logo">Ajay</div>
-                <ul class="nav-links">
-                    <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
-                    <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
-                    <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
-                    <li><a href="#projects"><i class="fas fa-folder-open"></i> Projects</a></li>
-                    <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
-                    <li><a href="#like"><i class="fas fa-heart"></i> <span id="like-count">1</span></a></li>
+                <a href="#home" class="logo">Ajay<span>.</span></a>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <div class="nav-right">
+                    <a href="Ajay.pdf" download class="btn btn-ghost nav-resume"><i class="fas fa-download"></i> Resume</a>
+                    <div class="hamburger" id="hamburger">
+                        <span></span><span></span><span></span>
+                    </div>
                 </div>
             </nav>
         </div>
     </header>
 
+    <!-- Hero -->
     <section id="home" class="hero">
-        <div class="container">
+        <div class="container hero-grid">
             <div class="hero-content">
-                <h1>Hello, I'm <span class="highlight">AJAY A</span></h1>
-                <h2>Software Developer</h2>
-                <p>I create beautiful, functional websites and applications.</p>
-                <div class="cta-buttons">
-                    <a href="#projects" class="btn primary-btn">View My Work</a>
-                    <a href="#contact" class="btn secondary-btn">Contact Me</a>
+                <p class="hero-tag reveal"><span class="status-dot"></span> Available for new opportunities</p>
+                <h1 class="reveal">Hi, I'm <span class="gradient-text">Ajay A</span></h1>
+                <h2 class="hero-role reveal">
+                    <span class="static-text">I'm a </span><span class="typed-text" id="typedText"></span><span class="cursor-blink">|</span>
+                </h2>
+                <p class="hero-desc reveal">
+                    Results-driven Full-Stack Developer with <strong>1.8+ years</strong> building
+                    AI-powered applications, scalable cloud solutions, and enterprise platforms.
+                    Expert in <strong>Python</strong>, <strong>React</strong>, <strong>AWS</strong> &amp; multi-LLM integrations.
+                </p>
+                <div class="cta-buttons reveal">
+                    <a href="#projects" class="btn btn-primary"><i class="fas fa-folder-open"></i> View My Work</a>
+                    <a href="#contact" class="btn btn-ghost"><i class="fas fa-paper-plane"></i> Get in Touch</a>
                 </div>
+                <div class="hero-socials reveal">
+                    <a href="https://github.com/ajay2617" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/ajay-a-a7a64a268" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:aajay7294@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.instagram.com/cruze_ajay" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
 
+            <div class="hero-visual reveal">
+                <div class="avatar-ring">
+                    <div class="avatar-wrap">
+                        <img src="image.png" alt="Ajay A">
+                    </div>
+                    <div class="float-chip chip-1"><i class="fab fa-aws"></i> AWS</div>
+                    <div class="float-chip chip-2"><i class="fab fa-python"></i> Python</div>
+                    <div class="float-chip chip-3"><i class="fab fa-react"></i> React</div>
+                    <div class="float-chip chip-4"><i class="fas fa-robot"></i> AI/LLM</div>
+                </div>
+            </div>
+        </div>
 
+        <a href="#about" class="scroll-down" aria-label="Scroll down"><i class="fas fa-chevron-down"></i></a>
+    </section>
 
-
-
-
-
+    <!-- Stats -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card reveal">
+                    <h3><span class="counter" data-target="1.6" data-decimals="1">0</span>+</h3>
+                    <p>Years Experience</p>
+                </div>
+                <div class="stat-card reveal">
+                    <h3><span class="counter" data-target="4">0</span></h3>
+                    <p>Production Apps</p>
+                </div>
+                <div class="stat-card reveal">
+                    <h3><span class="counter" data-target="500">0</span>+</h3>
+                    <p>Monthly Active Users</p>
+                </div>
+                <div class="stat-card reveal">
+                    <h3><span class="counter" data-target="35">0</span>%</h3>
+                    <p>Latency Reduced</p>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- About -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <p class="section-eyebrow reveal">Get to know me</p>
+            <h2 class="section-title reveal">About Me</h2>
             <div class="about-content">
-                <div class="about-image">
-                    <img src="image.png" alt="Profile Picture">
-                </div>
                 <div class="about-text">
-                    <p>AJAY A</p>
-                    <p>SOFTWARE DEVELOPER</p>
-                    <h3>PROFILE</h3>
-                    <p>To work in an organization where I can acquire new knowledge and sharpen my skills and put my efforts in achieving organizational as well as personal goals.</p>
-                    <h3>Career Objective</h3>
-                    <p>Seeking for a position in the field of developing a software. with automation/applications tha interface with other devices. To Work in a challenging enVironment with complete job satisfaction and to enhance technical and interpersonal skills for mutual benefits of the self</p>
-                    <div class="about-details">
-                        <div class="detail-item">
-                            <h3>Experience</h3>
-                            <p>6+months</p>
-                        </div>
-                        <div class="detail-item">
-                            <h3>Projects</h3>
-                            <p>2+ Completed</p>
-                        </div>
+                    <h3 class="reveal">Full-Stack Developer &amp; AWS Cloud Engineer</h3>
+                    <p class="reveal">
+                        I architect secure multi-tenant systems, optimize performance, and deliver
+                        production-grade solutions. Over the last 1.8+ years I've built AI-powered
+                        applications integrating multiple LLM providers, engineered responsive web
+                        platforms, and designed cloud infrastructure on AWS that serves enterprise clients.
+                    </p>
+                    <p class="reveal">
+                        My focus is on building things that are fast, reliable and scalable — from
+                        VS Code extensions used by hundreds of developers to enterprise backup
+                        platforms handling sensitive data with AES-256 encryption.
+                    </p>
+                    <div class="about-info-grid reveal">
+                        <div class="info-item"><i class="fas fa-user"></i><div><span>Name</span><strong>Ajay A</strong></div></div>
+                        <div class="info-item"><i class="fas fa-location-dot"></i><div><span>Location</span><strong>Madurai, India</strong></div></div>
+                        <div class="info-item"><i class="fas fa-graduation-cap"></i><div><span>Degree</span><strong>B.E CSE — 8.07 CGPA</strong></div></div>
+                        <div class="info-item"><i class="fas fa-envelope"></i><div><span>Email</span><strong>aajay7294@gmail.com</strong></div></div>
                     </div>
-                    <a href="Ajay.pdf" download class="btn primary-btn">Download Resume</a>
+                    <a href="Ajay.pdf" download class="btn btn-primary reveal"><i class="fas fa-download"></i> Download Resume</a>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Skills -->
     <section id="skills" class="skills">
         <div class="container">
-            <h2 class="section-title">My Skills</h2>
-            <div class="skills-content">
-                <div class="skill-category">
-                    <h3>Frontend Development</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="fab fa-html5"></i> <span>HTML</span>
-                            <div class="skill-progress">
-                                <div class="progress" style="width: 95%;"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-css3-alt"></i> <span>CSS</span>
-                            <div class="skill-progress">
-                                <div class="progress" style="width: 90%;"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-js"></i> <span>JavaScript</span>
-                            <div class="skill-progress">
-                                <div class="progress" style="width: 85%;"></div>
-                            </div>
-                        </div>
-
+            <p class="section-eyebrow reveal">What I work with</p>
+            <h2 class="section-title reveal">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card reveal">
+                    <div class="skill-icon"><i class="fas fa-code"></i></div>
+                    <h3>Languages</h3>
+                    <div class="tags">
+                        <span>Python</span><span>JavaScript</span><span>TypeScript</span><span>HTML</span><span>CSS</span>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3>Backend Development</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="fab fa-node-js"></i> <span>Node.js</span>
-                            <div class="skill-progress">
-                                <div class="progress" style="width: 50%;"></div>
-                            </div>
-                        </div>
-                        <div class="skill-items">
-                            <div class="skill-item">
-                                <i class="fas fa-database"></i> <span>My SQL</span>
-                                <div class="skill-progress">
-                                    <div class="progress" style="width: 50%;"></div>
-                                </div>
-                            </div>
-                        <div class="skill-item">
-                            <i class="fab fa-python"></i> <span>Python</span>
-                            <div class="skill-progress">
-                                <div class="progress" style="width: 80%;"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-flask"></i> <span>Flask</span>
-                            <div class="skill-progress">
-                                <div class="progress" style="width: 55%;"></div>
-                            </div>
-                        </div>
+                <div class="skill-card reveal">
+                    <div class="skill-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>Frontend</h3>
+                    <div class="tags">
+                        <span>React</span><span>Node.js</span><span>Electron</span>
                     </div>
                 </div>
-
-
-
-
-
-
-
+                <div class="skill-card reveal">
+                    <div class="skill-icon"><i class="fas fa-server"></i></div>
+                    <h3>Backend</h3>
+                    <div class="tags">
+                        <span>Flask</span><span>Django</span><span>REST APIs</span>
+                    </div>
+                </div>
+                <div class="skill-card reveal">
+                    <div class="skill-icon"><i class="fab fa-aws"></i></div>
+                    <h3>Cloud (AWS)</h3>
+                    <div class="tags">
+                        <span>Lambda</span><span>S3</span><span>DynamoDB</span><span>Amplify</span><span>API Gateway</span><span>EventBridge</span><span>Step Functions</span>
+                    </div>
+                </div>
+                <div class="skill-card reveal">
+                    <div class="skill-icon"><i class="fas fa-database"></i></div>
+                    <h3>Databases</h3>
+                    <div class="tags">
+                        <span>PostgreSQL</span><span>MySQL</span><span>DynamoDB</span>
+                    </div>
+                </div>
+                <div class="skill-card reveal">
+                    <div class="skill-icon"><i class="fas fa-robot"></i></div>
+                    <h3>AI / ML</h3>
+                    <div class="tags">
+                        <span>OpenAI</span><span>Claude</span><span>Gemini</span><span>Playwright</span><span>LangChain</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Experience -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <p class="section-eyebrow reveal">Where I've worked</p>
+            <h2 class="section-title reveal">Work Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date">Dec 2024 – Present</span>
+                        <h3>Python Developer &amp; AWS Cloud Engineer</h3>
+                        <h4>Laabamone Business Solutions <span class="muted">(Qualityze Client)</span></h4>
+                        <p>Building AI-powered developer tools and cloud-native platforms end to end.</p>
+                        <ul class="timeline-list">
+                            <li><strong>LobsAi</strong> — AI coding agent for VS Code integrating 4 LLM providers with real-time API tracking and AST-based analysis.</li>
+                            <li><strong>LobsAiCloud (Laibx)</strong> — production web platform with secure auth, real-time sync &amp; full-text search; 50+ enhancements at zero downtime.</li>
+                            <li><strong>PAXIH</strong> — AI search &amp; browser-automation engine with natural-language control and on-device Playwright automation.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <span class="timeline-date">Feb 2024 – June 2024</span>
+                        <h3>Contract Developer <span class="muted">(AWS &amp; Full-Stack)</span></h3>
+                        <h4>Qualityze Solutions Pvt. Ltd.</h4>
+                        <p>Architected an enterprise Salesforce Backup &amp; Restore platform.</p>
+                        <ul class="timeline-list">
+                            <li>Secure multi-tenant infrastructure for <strong>10+ Salesforce orgs</strong> with AES-256 encryption &amp; role-based access.</li>
+                            <li>Optimized DynamoDB queries, <strong>reducing latency by 35%</strong>.</li>
+                            <li>Orchestrated automated workflows via EventBridge &amp; Step Functions with a real-time monitoring dashboard.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">My Projects</h2>
+            <p class="section-eyebrow reveal">Recent work</p>
+            <h2 class="section-title reveal">Featured Projects</h2>
             <div class="projects-grid">
 
-                <div class="project-card">
-                    <div class="project-info">
-                        <h3>POWER SAVING MANAGEMENT</h3>
-                        <p>The system is capable of detecting the presence or absence of a person in a room and can automatically turn off the light and fan or any other electrical appliance when not in use.</p>
-                        <div class="project-tech">
-                            <span>Technology 1</span>
-                            <span>Technology 2</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="btn small-btn">Live Demo</a>
-                            <a href="#" class="btn small-btn secondary-btn">GitHub</a>
-                        </div>
+                <article class="project-card reveal">
+                    <div class="project-top">
+                        <i class="fas fa-briefcase project-glyph"></i>
+                        <span class="project-badge">AI · Recruitment</span>
                     </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-info">
-                        <h3>RASA CHAT BOT</h3>
-                        <p>Rasa is an open-source framework for building AI-powered chatbots and virtual assistants using natural language processing (NLP). It allows developers to create conversational agents that understand user inputs, manage dialogues, and integrate with various platforms.</p>
-                        <div class="project-tech">
-                            <span>Technology 1</span>
-                            <span>Technology 2</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="btn small-btn">Live Demo</a>
-                            <a href="#" class="btn small-btn secondary-btn">GitHub</a>
-                        </div>
+                    <h3>WorkDu — AI Job &amp; Recruitment Platform</h3>
+                    <p>AI-powered hiring platform at LaabamOne. Built a real-time candidate–employer messaging system (Livewire + WebSockets via Echo/Pusher with polling fallback) featuring typing indicators, read receipts &amp; online presence; a 6-step resume builder with autosave, parsing/auto-fill &amp; ATS scoring; and an AI chatbot with streaming responses plus candidate–job match scoring.</p>
+                    <div class="project-tech">
+                        <span>Laravel</span><span>Livewire</span><span>MySQL</span><span>JavaScript</span><span>WebSockets</span>
                     </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-info">
-                        <h3>Flight Delay Prediction using Flask and Machine Learning</h3>
-                        <p>This project builds a web application using Flask to predict flight delays based on historical flight data stored in a CSV file. The machine learning model is trained using Python libraries like pandas, scikit-learn, and TensorFlow to analyze factors such as departure time, weather conditions, and airline performance</p>
-                        <div class="project-tech">
-                            <span>Technology 1</span>
-                            <span>Technology 2</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="btn small-btn">Live Demo</a>
-                            <a href="#" class="btn small-btn secondary-btn">GitHub</a>
-                        </div>
+                    <div class="project-links">
+                        <a href="https://www.workdu.com/" target="_blank" class="proj-link"><i class="fas fa-arrow-up-right-from-square"></i> Live</a>
                     </div>
-                </div>
+                </article>
+
+                <article class="project-card reveal">
+                    <div class="project-top">
+                        <i class="fas fa-wand-magic-sparkles project-glyph"></i>
+                        <span class="project-badge">AI Tooling</span>
+                    </div>
+                    <h3>LobsAi — AI Coding Agent</h3>
+                    <p>Intelligent VS Code extension enabling semi-autonomous code generation &amp; debugging. Integrated 4 LLM providers with real-time API tracking and AST-based error feedback loops.</p>
+                    <div class="project-tech">
+                        <span>TypeScript</span><span>OpenAI</span><span>Claude</span><span>Gemini</span><span>OpenRouter</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/ajay2617" target="_blank" class="proj-link"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </article>
+
+                <article class="project-card reveal">
+                    <div class="project-top">
+                        <i class="fas fa-globe project-glyph"></i>
+                        <span class="project-badge">Web Platform</span>
+                    </div>
+                    <h3>LobsAiCloud (Laibx)</h3>
+                    <p>Responsive production-grade web platform with secure authentication, real-time sync and full-text search. Optimized cross-browser for mobile &amp; desktop with 50+ enhancements at zero downtime.</p>
+                    <div class="project-tech">
+                        <span>React</span><span>Node.js</span><span>AWS</span><span>REST APIs</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/ajay2617" target="_blank" class="proj-link"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </article>
+
+                <article class="project-card reveal">
+                    <div class="project-top">
+                        <i class="fas fa-magnifying-glass-chart project-glyph"></i>
+                        <span class="project-badge">AI Automation</span>
+                    </div>
+                    <h3>PAXIH — AI Search Engine</h3>
+                    <p>AI-driven search platform with natural-language browser control. Integrated multiple AI models with token tracking &amp; cost optimization, plus secure on-device automation using Playwright.</p>
+                    <div class="project-tech">
+                        <span>Python</span><span>Playwright</span><span>LangChain</span><span>Multi-LLM</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/ajay2617" target="_blank" class="proj-link"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </article>
+
+                <article class="project-card reveal">
+                    <div class="project-top">
+                        <i class="fas fa-shield-halved project-glyph"></i>
+                        <span class="project-badge">Enterprise · AWS</span>
+                    </div>
+                    <h3>Salesforce Backup &amp; Restore</h3>
+                    <p>Enterprise backup system for 10+ Salesforce orgs with AES-256 encryption &amp; role-based access. Reduced DynamoDB latency by 35% and orchestrated workflows via EventBridge &amp; Step Functions.</p>
+                    <div class="project-tech">
+                        <span>AWS</span><span>DynamoDB</span><span>Step Functions</span><span>EventBridge</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/ajay2617" target="_blank" class="proj-link"><i class="fab fa-github"></i> Code</a>
+                    </div>
+                </article>
 
             </div>
         </div>
     </section>
 
+    <!-- Achievements -->
+    <section class="achievements">
+        <div class="container">
+            <p class="section-eyebrow reveal">Highlights</p>
+            <h2 class="section-title reveal">Key Achievements</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card reveal">
+                    <i class="fas fa-gauge-high"></i>
+                    <p>Reduced backup job execution time by <strong>35%</strong> through DynamoDB query optimization.</p>
+                </div>
+                <div class="achievement-card reveal">
+                    <i class="fas fa-star"></i>
+                    <p>Published a VS Code extension serving <strong>500+ monthly active users</strong> with a 4.5 rating.</p>
+                </div>
+                <div class="achievement-card reveal">
+                    <i class="fas fa-rocket"></i>
+                    <p>Built &amp; deployed <strong>4 production-grade</strong> full-stack apps with zero critical incidents.</p>
+                </div>
+                <div class="achievement-card reveal">
+                    <i class="fas fa-lock"></i>
+                    <p>Architected secure <strong>multi-tenant systems</strong> for enterprise clients with SLA compliance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="education">
+        <div class="container">
+            <p class="section-eyebrow reveal">My background</p>
+            <h2 class="section-title reveal">Education</h2>
+            <div class="education-grid">
+                <div class="edu-card reveal">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span class="edu-year">2020 – 2024</span>
+                    <h3>B.E Computer Science Engineering</h3>
+                    <p>Sethu Institute of Technology</p>
+                    <span class="edu-score">CGPA: 8.07 / 10</span>
+                </div>
+                <div class="edu-card reveal">
+                    <i class="fas fa-school"></i>
+                    <span class="edu-year">2020</span>
+                    <h3>HSC — 12th Grade</h3>
+                    <p>ROSE Matriculation Higher Secondary School</p>
+                    <span class="edu-score">Score: 55%</span>
+                </div>
+                <div class="edu-card reveal">
+                    <i class="fas fa-book"></i>
+                    <span class="edu-year">2018</span>
+                    <h3>SSLC — 10th Grade</h3>
+                    <p>V.H.N. Higher Secondary School</p>
+                    <span class="edu-score">Score: 65.5%</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Contact Me</h2>
+            <p class="section-eyebrow reveal">Let's connect</p>
+            <h2 class="section-title reveal">Get In Touch</h2>
             <div class="contact-content">
-                <div class="contact-info">
+                <div class="contact-info reveal">
+                    <h3>Let's build something great together.</h3>
+                    <p>Have a project in mind or just want to say hi? My inbox is always open.</p>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
-                        <div>
-                            <h3>Email</h3>
-                            <p>aajay7294@gmail.com</p>
-                        </div>
+                        <div><span>Email</span><a href="mailto:aajay7294@gmail.com">aajay7294@gmail.com</a></div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
-                        <div>
-                            <h3>Phone</h3>
-                            <p>9361865587</p>
-                        </div>
+                        <div><span>Phone</span><a href="tel:+919361863587">+91 93618 63587</a></div>
                     </div>
                     <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h3>Location</h3>
-                            <p>Madurai Tamil Nadu</p>
-                        </div>
+                        <i class="fas fa-location-dot"></i>
+                        <div><span>Location</span><p>Madurai, Tamil Nadu, India</p></div>
                     </div>
                     <div class="social-links">
-                        <a href="https://www.linkedin.com/in/ajay-a-a7a64a268?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/AJAY2617" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://www.instagram.com/cruze_ajay?igsh=MW9ia3V1eDMyb3hycA%3D%3D&utm_source=qr" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/ajay-a-a7a64a268" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/ajay2617" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.instagram.com/cruze_ajay" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
-                <div class="contact-form">
-                    <form id="contactForm" action="https://formspree.io/f/your_form_id" method="POST">
+                <div class="contact-form reveal">
+                    <form id="contactForm">
                         <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            <input type="text" id="name" name="name" placeholder=" " required>
+                            <label for="name">Your Name</label>
                         </div>
                         <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                            <input type="email" id="email" name="email" placeholder=" " required>
+                            <label for="email">Your Email</label>
                         </div>
                         <div class="form-group">
-                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                            <input type="text" id="subject" name="subject" placeholder=" " required>
+                            <label for="subject">Subject</label>
                         </div>
                         <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                            <textarea id="message" name="message" rows="5" placeholder=" " required></textarea>
+                            <label for="message">Your Message</label>
                         </div>
-                        <button type="submit" class="btn primary-btn">Send Message</button>
+                        <button type="submit" class="btn btn-primary btn-block"><i class="fas fa-paper-plane"></i> Send Message</button>
+                        <p class="form-status" id="formStatus"></p>
                     </form>
                 </div>
-
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
-        <div class="container">
-            <p>&copy; 2025 Ajay. All Rights Reserved.</p>
+        <div class="container footer-inner">
+            <a href="#home" class="logo">Ajay<span>.</span></a>
+            <p>&copy; 2026 Ajay A. Designed &amp; built with passion.</p>
+            <div class="social-links">
+                <a href="https://github.com/ajay2617" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/ajay-a-a7a64a268" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:aajay7294@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
         </div>
     </footer>
+
+    <a href="#home" class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
 
     <script src="script.js"></script>
 </body>
