@@ -32,13 +32,14 @@
         <div class="blob blob-2"></div>
         <div class="blob blob-3"></div>
         <div class="grid-overlay"></div>
+        <canvas id="bg-canvas"></canvas>
     </div>
 
     <!-- Header -->
     <header id="header">
         <div class="container">
             <nav>
-                <a href="#home" class="logo">Ajay<span>.</span></a>
+                <a href="#home" class="logo">Ajay<span>.</span>A</a>
                 <ul class="nav-links" id="navLinks">
                     <li><a href="#home" class="active">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -108,7 +109,7 @@
                     <p>Years Experience</p>
                 </div>
                 <div class="stat-card reveal">
-                    <h3><span class="counter" data-target="5">0</span></h3>
+                    <h3><span class="counter" data-target="6">0</span></h3>
                     <p>Live Projects</p>
                 </div>
                 <div class="stat-card reveal">
@@ -278,7 +279,7 @@
                         <span>TypeScript</span><span>OpenAI</span><span>Claude</span><span>Gemini</span><span>OpenRouter</span><span>MCP</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://marketplace.visualstudio.com/items?itemName=laabam.lobs-ai" target="_blank" class="proj-link"><i class="fas fa-arrow-up-right-from-square"></i> Marketplace</a>
+                        <a href="https://marketplace.visualstudio.com/items?itemName=laabam.lobsai-coder" target="_blank" class="proj-link"><i class="fas fa-arrow-up-right-from-square"></i> Live</a>
                     </div>
                 </article>
 
@@ -293,22 +294,22 @@
                         <span>React</span><span>Node.js</span><span>REST APIs</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://laibx.com" target="_blank" class="proj-link"><i class="fas fa-arrow-up-right-from-square"></i> Live</a>
+                        <a href="https://www.laibx.com/" target="_blank" class="proj-link"><i class="fas fa-arrow-up-right-from-square"></i> Live</a>
                     </div>
                 </article>
 
                 <article class="project-card reveal">
                     <div class="project-top">
-                        <i class="fas fa-magnifying-glass-chart project-glyph"></i>
-                        <span class="project-badge">AI Automation</span>
+                        <i class="fas fa-handshake project-glyph"></i>
+                        <span class="project-badge">B2B · Marketplace</span>
                     </div>
-                    <h3>PAXIH — AI Search Engine</h3>
-                    <p>AI-driven search platform and Chrome extension for natural-language browser control. Secure, on-device automation using LLMs and Playwright with built-in privacy safeguards, multi-model integration with token tracking, and tools for navigation, summarization, form handling &amp; workflow automation.</p>
+                    <h3>LeadAtoZ — B2B Marketplace</h3>
+                    <p>A B2B marketplace connecting buyers with verified suppliers and manufacturers across multiple industries. Supports business discovery, product listings and inquiry management, powered by AI-driven matching capabilities.</p>
                     <div class="project-tech">
-                        <span>Python</span><span>Playwright</span><span>OpenAI</span><span>Claude</span><span>Gemini</span><span>Ollama</span>
+                        <span>B2B Marketplace</span><span>AI Matching</span><span>Business Discovery</span><span>Product Listings</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://paxih.vercel.app" target="_blank" class="proj-link"><i class="fas fa-arrow-up-right-from-square"></i> Live</a>
+                        <a href="https://www.leadatoz.com" target="_blank" class="proj-link"><i class="fas fa-arrow-up-right-from-square"></i> Live</a>
                     </div>
                 </article>
 
@@ -323,7 +324,22 @@
                         <span>React</span><span>TypeScript</span><span>AWS Amplify</span><span>Lambda</span><span>DynamoDB</span><span>S3</span>
                     </div>
                     <div class="project-links">
-                        <a href="https://sfbackuptest.qualityze.com" target="_blank" class="proj-link"><i class="fas fa-arrow-up-right-from-square"></i> Live</a>
+                        <a href="https://sfbackuptest.qualityze.com/" target="_blank" class="proj-link"><i class="fas fa-arrow-up-right-from-square"></i> Live</a>
+                    </div>
+                </article>
+
+                <article class="project-card reveal">
+                    <div class="project-top">
+                        <i class="fas fa-folder-tree project-glyph"></i>
+                        <span class="project-badge">Cloud · AWS</span>
+                    </div>
+                    <h3>Cross-Account AWS File Manager</h3>
+                    <p>Cross-account AWS file management app for secure listing and uploading of files across AWS accounts. Lambda functions inventory folders and archive data to Glacier, with cross-account access via IAM trust &amp; assume-role policies and automated account setup through shell scripts.</p>
+                    <div class="project-tech">
+                        <span>TypeScript</span><span>Vite</span><span>React</span><span>AWS Amplify</span><span>Lambda</span><span>Glacier</span><span>IAM</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://master.d1uayzli2ilhs7.amplifyapp.com/" target="_blank" class="proj-link"><i class="fas fa-arrow-up-right-from-square"></i> Live</a>
                     </div>
                 </article>
 
@@ -444,7 +460,7 @@
     <!-- Footer -->
     <footer>
         <div class="container footer-inner">
-            <a href="#home" class="logo">Ajay<span>.</span></a>
+            <a href="#home" class="logo">Ajay<span>.</span>A</a>
             <p>&copy; 2026 Ajay A. Designed &amp; built with passion.</p>
             <div class="social-links">
                 <a href="https://github.com/ajay2617" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
@@ -456,6 +472,8 @@
 
     <a href="#home" class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="three-bg.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
